@@ -2,6 +2,9 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 
+// include restaurant data
+const restaurants = require('./restaurant.json').results
+
 const app = express()
 
 // define the relative variables
@@ -15,7 +18,7 @@ app.set('view engine', 'handlebars')
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', {restaurants})
 })
 
 // start and listen on server
