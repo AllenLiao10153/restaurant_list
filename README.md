@@ -4,7 +4,7 @@
 
 在本專案網站上可以搜尋餐廳名稱及類別，及檢視餐廳詳細資訊，包含餐廳名稱、地點、評價及介紹。
 
-![image](./public/images/index_page.jpg) ![image](./public/images/index_page.jpg)
+![image](./public/images/index_page.jpg) ![image](./public/images/show_page.jpg)
 
 ## 功能
 
