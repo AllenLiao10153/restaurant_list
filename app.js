@@ -1,13 +1,21 @@
-// include express moduele
+// include modueles from npm
 const express = require('express')
+const exphbs = require('express-handlebars')
+
 const app = express()
 
 // define the relative variables
 const port = 3000
 
+// set the view template
+app.engine('handlebars', exphbs({defaultLayout: 'main'}))
+app.set('view engine', 'handlebars')
+
 // set the routes
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
-  res.send('project init')
+  res.render('index')
 })
 
 // start and listen on server
